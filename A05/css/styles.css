@@ -1,0 +1,226 @@
+body {
+  background: linear-gradient(180deg, rgb(10 10 10 / .7), rgb(45 45 45 / .7) 16%, rgb(89 89 89 / .7) 86%);
+  background-size: 300%;
+  height: 100%;
+}
+
+
+
+/* Header Login Part */
+#header {
+  margin-top: 100px;
+}
+
+.head {
+  max-height: 120px;
+}
+
+.title-head {
+  font-family: Alumni Sans Inline One;
+  font-size: 128px;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(180deg, #8B5A2B, #FFD700 54%, #FFEA00);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.login-head {
+  font-family: Alumni Sans Inline One;
+  font-size: 48px;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC 41%, #B1B1B1 68%, #494949 93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+
+/* Card Layout*/
+.card {
+  background: linear-gradient(180deg, rgb(89 89 89 / .7), rgb(45 45 45 / .7), rgb(10 10 10 / .7));
+}
+
+
+
+/* Login*/
+.login-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-auto {
+  display: flex;
+  margin-top: 20px;
+}
+
+.login-name label, .login-password label {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC, #B1B1B1, #494949);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.login-auto label {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC, #B1B1B1, #494949);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.login-name input, .login-password input {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  background: transparent;
+  border-bottom: 2px #9D9445 solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+}
+
+.login-name input:focus, .login-password input:focus {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #212121;
+  background: transparent;
+}
+
+.login-auto input {
+  border: 2px #9D9445 solid;
+  width: 25px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+
+
+/* Login SUbmit */
+.login-submit {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-submit button {
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: bold;
+  color: #FFFCFC;
+  border: none;
+  background: linear-gradient(180deg, #8B5A2B 32%, #FFD700 65%, #FFEA00 100%);
+}
+
+.login-submit button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, #8B5A2B 12%, #FFD700 65%, #FFEA00 100%);
+  color: #8B5A2B;
+}
+
+
+
+/* Sign Up */
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: 80px;
+}
+
+.sign-up-label,
+.sign-up-now {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC, #B1B1B1, #494949);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+  display: inline-block;
+}
+
+.sign-up button {
+  padding: 0;
+  color: transparent;
+  background: linear-gradient(180deg, rgb(255, 252, 252, .5), rgb(177, 177, 177, .5), rgb(73, 73, 73, .5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: underline;
+}
+
+
+/* Sign up page form */
+.form-label {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC, #B1B1B1, #494949);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.frm-sign {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  background: transparent;
+  border-bottom: 2px #9D9445 solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0px;
+}
+
+.frm-sign:focus {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: bold;
+  color: #212121;
+  background: transparent;
+}
+
+.log-here {
+  opacity: 80%;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(180deg, #FFFCFC, #B1B1B1, #494949);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.log-here:hover {
+  transform: translateY(-3px);
+  color: rgb(202, 197, 237);
+  text-decoration: underline;
+}
+
+.btn-sign {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+  color: #FFFCFC;
+  border: none;
+  background: linear-gradient(180deg, #8B5A2B 32%, #FFD700 65%, #FFEA00 100%);
+}
+
+.btn-sign:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, #8B5A2B 12%, #FFD700 65%, #FFEA00 100%);
+  color: #8B5A2B;
+}
+
