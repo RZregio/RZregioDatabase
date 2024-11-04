@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($result->num_rows > 0) {
     session_start();
     $_SESSION['user'] = $result->fetch_assoc();
-
     header("Location: home.php");
     exit();
   } else {

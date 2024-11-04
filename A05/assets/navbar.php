@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <nav id="upper-section" class="navbar navbar-expand-lg shadow">
   <div class="container-fluid">
     <a class="title navbar-brand" href="../index.html">
