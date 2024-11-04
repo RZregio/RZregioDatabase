@@ -21,7 +21,7 @@ session_start();
 <body>
   <?php include('assets/navbar.php') ?>
   <div id="header" class="container">
-    <div class="row mt-5">
+    <div class="row mt-5 pt-5">
       <div class="head col">
         <div class="title-head">
           B.T
@@ -34,6 +34,9 @@ session_start();
           Welcome to BuzzIT Teleco
         </div>
       </div>
+    </div>
+    <div class="p-5">
+
     </div>
   </div>
 

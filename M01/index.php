@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
       </div>
     </div>
-    <div class="row mt-2">
+    <div class="row mt-1">
       <div class="head col">
         <div class="login-head">
           Login to BuzzIT Teleco
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               <button type="submit" class="btn">Log In</button>
             </div>
 
-            <div class="sign-up mb-3">
+            <div class="sign-up mb-1">
               <label for="" class="sign-up-label">First time here?</label>
               <button type="submit" class="btn sign-up-now" onclick="window.location.href='signup.php'">Create a new
                 account</button>

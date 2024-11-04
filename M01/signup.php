@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </div>
       </div>
     </div>
-    <div class="row mt-5">
+    <div class="row mt-1">
       <div class="head col">
         <div class="login-head">
           Create a New Account
@@ -71,11 +71,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-1">
     <div class="row">
       <div class="col">
         <div class="card p-5">
           <form method="POST" onsubmit="return validatePassword()">
+          <?php if ($signup_success): ?>
+            <div class="alert alert-success" role="alert">
+              Account created successfully! Click the Login in here below.
+            </div>
+          <?php elseif ($signup_failed): ?>
+            <div class="alert alert-danger" role="alert">
+              Sign up failed. Please try again.
+            </div>
+          <?php elseif ($password_mismatch): ?>
+            <div class="alert alert-danger" role="alert">
+              Passwords do not match. Please try again.
+            </div>
+          <?php endif; ?>
             <div class="mb-3">
               <label for="username" class="form-label">Username</label>
               <input type="text" name="username" class="form-control frm-sign" id="username" required>
@@ -101,20 +114,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
           </form>
           <a class="log-here" href="index.php">Log in here</a>
-
-          <?php if ($signup_success): ?>
-            <div class="alert alert-success" role="alert">
-              Account created successfully!
-            </div>
-          <?php elseif ($signup_failed): ?>
-            <div class="alert alert-danger" role="alert">
-              Sign up failed. Please try again.
-            </div>
-          <?php elseif ($password_mismatch): ?>
-            <div class="alert alert-danger" role="alert">
-              Passwords do not match. Please try again.
-            </div>
-          <?php endif; ?>
         </div>
       </div>
     </div>

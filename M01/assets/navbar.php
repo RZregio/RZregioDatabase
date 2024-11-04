@@ -14,7 +14,7 @@
     <div class="navigation collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <?php if (isset($_SESSION['user'])): ?>
-          <a class="nav-link" aria-current="page" href="../A05/home.php">Home</a>
+          <a class="nav-link" aria-current="page" href="../M01/home.php">Home</a>
         <?php else: ?>
           <a class="nav-link" href="#" onclick="showLoginMessage(event)">Home</a>
         <?php endif; ?>
@@ -33,7 +33,7 @@
 
         <?php if (isset($_SESSION['user'])): ?>
           <li class="nav-item">
-            <a class="nav-link" href="../A05/logout.php">Logout</a>
+            <a class="nav-link" href="../M01/logout.php">Logout</a>
           </li>
         <?php endif; ?>
       </ul>
