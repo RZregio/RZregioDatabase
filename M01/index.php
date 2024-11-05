@@ -4,14 +4,15 @@ $login_failed = false;
 
 
 
-// Login Method
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $username = $_POST['username'];
   $password = $_POST['password'];
-  
 
   // Use prepared statements to prevent SQL injection
-  $stmt = $conn->prepare("SELECT * FROM users WHERE (userName = ? OR email = ?) AND password = ?");
+  $stmt = $conn->prepare("SELECT u.*, ui.firstName, ui.lastName, ui.birthDay 
+                           FROM users u 
+                           LEFT JOIN userinfo ui ON u.userInfoID = ui.userInfoID 
+                           WHERE (u.userName = ? OR u.email = ?) AND u.password = ?");
   $stmt->bind_param("sss", $username, $username, $password);
   $stmt->execute();
   $result = $stmt->get_result();
@@ -29,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
+
 <!doctype html>
 <html lang="en">
 
@@ -40,6 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="assets/bt.ico"> 
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -127,13 +130,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       <?php if ($login_failed): ?>
-        showLogMessage();
+        setTimeout(function() {
+          alert("Wrong username or password.");
+        }, 100);  
       <?php endif; ?>
     });
-
-    function showLogMessage() {
-      alert("Wrong username or password.");
-    }
   </script>
 </body>
 

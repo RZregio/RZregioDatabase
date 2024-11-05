@@ -15,9 +15,6 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <?php if (isset($_SESSION['user'])): ?>
           <a class="nav-link" aria-current="page" href="../M01/home.php">Home</a>
-        <?php else: ?>
-          <a class="nav-link" href="#" onclick="showLoginMessage(event)">Home</a>
-        <?php endif; ?>
         <li class="nav-item">
           <a class="nav-link" href="#find">Feeds</a>
         </li>
@@ -28,9 +25,23 @@
           <a class="nav-link" href="#find">Friends</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#more-site">Profile</a>
+          <a class="nav-link" href="#find">Profile</a>
         </li>
-
+        <?php else: ?>
+          <a class="nav-link" href="#" onclick="showLoginMessage(event)">Home</a>
+          <li class="nav-item">
+          <a class="nav-link" href="#find" onclick="showLoginMessage(event)">Feeds</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#find" onclick="showLoginMessage(event)">Messages</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#find" onclick="showLoginMessage(event)">Friends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#find" onclick="showLoginMessage(event)">Profile</a>
+        </li>
+        <?php endif; ?>
         <?php if (isset($_SESSION['user'])): ?>
           <li class="nav-item">
             <a class="nav-link" href="../M01/logout.php">Logout</a>

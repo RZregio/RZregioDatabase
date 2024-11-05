@@ -1,6 +1,16 @@
 <?php
 include('connect.php');
 session_start();
+
+// Check if user is logged in
+if (!isset($_SESSION['user'])) {
+  // Redirect to login page or show an error
+  header("Location: login.php");
+  exit();
+}
+
+// Fetch user information from session
+$user = $_SESSION['user'];
 ?>
 
 <!doctype html>
@@ -14,6 +24,7 @@ session_start();
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="assets/bt.ico"> 
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -32,6 +43,10 @@ session_start();
       <div class="head col">
         <div class="login-head">
           Welcome to BuzzIT Teleco
+        </div>
+        <div class="welcome-user-head">
+          <?php echo  htmlspecialchars(strtoupper($user['userName']));
+          ?>
         </div>
       </div>
     </div>
