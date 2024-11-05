@@ -24,7 +24,7 @@ $user = $_SESSION['user'];
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" href="assets/bt.ico"> 
+  <link rel="icon" href="assets/bt.ico">
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -44,8 +44,8 @@ $user = $_SESSION['user'];
         <div class="login-head">
           Welcome to BuzzIT Teleco
         </div>
-        <div class="welcome-user-head">
-          <?php echo  htmlspecialchars(strtoupper($user['userName']));
+        <div class="user-head">
+          <?php echo htmlspecialchars(strtoupper($user['userName']));
           ?>
         </div>
       </div>

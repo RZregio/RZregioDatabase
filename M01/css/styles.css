@@ -245,7 +245,7 @@ body {
 
 
 /*Home page*/
-.welcome-user-head {
+.user-head {
   font-family: Alumni Sans Inline One;
   font-size: 40px;
   text-align: center;
@@ -253,19 +253,27 @@ body {
   background: linear-gradient(180deg, #FFFCFC 41%, #B1B1B1 68%, #494949 93%);
   background-clip: text;
   -webkit-background-clip: text;
-  animation: gradientText 5s ease infinite;
+  animation: Scaleup 10s ease infinite;
 }
 
-@keyframes gradientText {
+@keyframes Scaleup {
   0% {
-    background-position: 0% 50%
+    transform: scale(1.0);
+  }
+
+  25% {
+    transform: scale(1.1);
   }
 
   50% {
-    background-position: 100% 50%
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(1.1);
   }
 
   100% {
-    background-position: 0% 50%
+    transform: scale(1.0);
   }
 }
